@@ -3651,9 +3651,10 @@ figcaption {
     align-items: stretch;
     width: 100%;
     margin-bottom: 14px;
-    padding: 200px 50px 110px;
+    padding: 124px 50px 110px;
     display: flex;
-    position: relative
+    position: relative;
+    overflow: hidden;
 }
 
 .section-top.less-pt {
@@ -4493,7 +4494,7 @@ figcaption {
 
     .section-top {
         margin-bottom: 10px;
-        padding: 180px 30px 90px
+        padding: 124px 30px 90px
     }
 
     .grid-services,
@@ -4769,7 +4770,8 @@ figcaption {
 
     .section-top {
         padding-top: 170px;
-        padding-bottom: 70px
+        padding-bottom: 70px;
+       
     }
 
     .grid-services {
@@ -4890,6 +4892,7 @@ figcaption {
     .section {
         margin-bottom: 6px;
         padding: 55px 16px
+
     }
 
     .section.padding {
@@ -5029,7 +5032,8 @@ figcaption {
         margin-bottom: 6px;
         padding-bottom: 55px;
         padding-left: 16px;
-        padding-right: 16px
+        padding-right: 16px;
+        margin-top: -80px;
     }
 
     .grid-services,
