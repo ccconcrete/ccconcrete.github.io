@@ -132,9 +132,8 @@
             position: relative;
             padding-bottom: 56.25%; /*  16:9 */
             padding-top: 25px;
-            height: 824px;
             min-width: 620px;
-
+            height:1000px;
           }
 
           .responsive-iframe {
@@ -190,7 +189,7 @@
         </style>
         <div class="container">
           <iframe
-            src="https://collectcheckout.com/cart/checkout.php?cart_configuration_id=658170"
+            src="https://collectcheckout.com/r/y50kz2jvh1zpk6chs7mu8890fzdmd8"
             width="100%"
             height="auto"
             class="responsive-iframe"
@@ -595,8 +594,9 @@
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/webflow-script.js" type="text/javascript"></script>
     <script>
-        var isTimeout;
-var isLoaded;
+
+let isLoaded = false;
+let isTimeout = false;
 
 function success() {
   if (isTimeout) {
@@ -605,7 +605,12 @@ function success() {
   $('#loading').hide();
   $('iframe').show();
   isLoaded = true;
+  clearInterval(checkInterval);
 };
+
+const checkInterval = setInterval(() => {
+  success();
+}, 5000);
 
 setTimeout(function () {
     if (isLoaded) {
@@ -615,6 +620,7 @@ setTimeout(function () {
     $('iframe').hide();
     $('#error').show();
     isTimeout = true;
+    clearInterval(checkInterval); 
 }, 10000);
     </script>
   </body>
